@@ -17,7 +17,7 @@ export async function POST(request) {
   const { data, error } = await supabase.from('tickets')
     .insert({
       ...ticket,
-      user_email: session.user.email
+      user_email: session.user.email,
     })
     .select()
     .single()
