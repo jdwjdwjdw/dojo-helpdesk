@@ -3,7 +3,7 @@ import { notFound } from "next/navigation"
 import { cookies } from "next/headers"
 
 // Components
-import DeleteButton from "./DeleteButton"
+import DeleteIcon from "./DeleteIcon"
 
 export const dynamicParams = true // default val = true
 
@@ -47,7 +47,7 @@ export default async function TicketDetails({ params }) {
         <h2>Ticket Details</h2>
         <div className="ml-auto">
           {data.session.user.email === ticket.user_email && (
-            <DeleteButton id={ticket.id} />
+            <DeleteIcon id={ticket.id} />
           )}
         </div>
       </nav>
